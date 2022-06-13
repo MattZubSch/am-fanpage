@@ -1,0 +1,569 @@
+/* reset */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* Caracteristicas del Body: Background y Color de fuente */
+
+body{
+    color: white;
+    background-image: url('../img/back2.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    font-size: 16px;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    text-align: center;
+}
+
+/* caracteristicas del titulo */
+
+.title{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 3rem;
+    margin-top: 3rem;
+    font-weight: 1500;
+}
+
+#secondTitle{
+    margin-top: 0rem;
+    margin-bottom: 3rem;
+}
+
+/* caracteristicas del subtitulo */
+
+.subtitle{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    text-transform: uppercase;
+    font-size: 1rem;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    font-weight: 1500;
+}
+
+/* caracteristicas del Menu de direccion */
+
+.menu{
+    /* margin: 2rem; */
+    text-align: center;
+}
+
+header nav ul{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+header nav ul li{
+    list-style: none;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    
+}
+
+header nav ul li a{
+    text-decoration: none;
+    padding: 0.5rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    border: 2px solid;
+    border-bottom: 4px solid;
+    border-left: 4px solid;
+    border-radius: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    font-weight: 1000;
+    font-size: 0.8rem;
+    color: black;
+    background-color: rgb(190, 77, 68);
+}
+
+/* caracteristicas del Main */
+
+main{
+    background-image: url('../img/back3.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    font-size: 16px;
+}
+
+.mainIndex{
+    /* border-radius: 2rem;
+    border-style: solid;
+    border-color: black; */
+    padding: 10%;
+    /* border-radius: 1rem;
+    margin: 0.5rem; */
+    display: grid;
+    grid-template-areas: "imgH imgH"
+                         "titleH titleH"
+                         "textH textH"
+                         "linkH linkH"
+                         "imgD imgD"
+                         "titleD titleD"
+                         "textD textD"
+                         "linkD linkD"
+                         "imgE imgE"
+                         "titleE titleE"
+                         "textE textE"
+                         "linkE linkE"
+                         "imgC imgC"
+                         "titleC titleC"
+                         "textC textC"
+                         "linkC linkC";
+    row-gap: 1rem;
+}
+
+/* caracteristicas de las fotos  */
+.mainImg{
+    border-radius: 10px;
+    border-style: groove;
+    /* margin-top: 1rem; */
+    width: 100%;
+}
+
+/* Caracteristicas de los titulos del main */
+
+.mainTitle{
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    /* margin: 1rem;
+    margin-top: 0rem; */
+    font-size: 2em;
+    text-align: center;
+    font-style: italic;
+    font-weight: 1000;
+}
+
+/* Caracteristicas de los textos del main */
+
+.mainText{
+    /* margin: 1rem;
+    margin-bottom: 1rem; */
+    font-size: 1.2em;
+    text-align: center;
+}
+
+/* Caracteristicas de los enlaces del main */
+
+.mainLink{
+    /* margin: 1rem;
+    margin-top: 0rem; */
+    color: white;
+    font-size: 1.2em;
+}
+
+/* Areas del Main Grid: dsitribucion y nombre */
+
+#imgH{
+    align-self: center;
+    grid-area: imgH;
+}
+
+#titleH{
+    grid-area: titleH;
+    justify-self: center;
+}
+
+#textH{
+    grid-area: textH;
+    text-align: start;
+}
+
+#linkH{
+    grid-area: linkH;
+    text-align: center;
+}
+
+#imgD{
+    grid-area: imgD;
+    justify-self: center
+}
+
+#titleD{
+    grid-area: titleD;
+    justify-self: center;
+}
+
+#textD{
+    grid-area: textD;
+    text-align: end;
+}
+
+#linkD{
+    grid-area: linkD;
+    text-align: center;
+}
+
+#imgE{
+    justify-self: center;
+    grid-area: imgE;
+}
+
+#titleE{
+    grid-area: titleE;
+    justify-self: center;
+}
+
+#textE{
+    grid-area: textE;
+    text-align: start;
+}
+
+#linkE{
+    grid-area: linkE;
+    text-align: center;
+}
+
+#imgC{
+    grid-area: imgC;
+    justify-self: center
+}
+
+#titleC{
+    grid-area: titleC;
+    justify-self: center;
+}
+
+#textC{
+    grid-area: textC;
+    text-align: end;
+}
+
+#linkC{
+    grid-area: linkC;
+    text-align: center;
+}
+
+.mainHistoria{
+    padding: 0.8rem;
+    display: grid;
+    grid-template-areas: "histTitle histTitle histTitle histTitle" 
+                         "img1 text1 text1 text1"
+                         "text2 text2 text2 img2"
+                         "img3 text3 text3 text3"
+                         "text4 text4 text4 img4"
+                         "img5 text5 text5 text5"
+                         "text6 text6 text6 img6"
+                         "img7 text7 text7 text7"
+                         "text8 text8 text8 img8"
+                         "img9 text9 text9 text9"
+                         "text10 text10 text10 img10";
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr; 
+    row-gap: 1rem;    
+}
+
+.histImg{
+    border-radius: 1rem;
+    border-style: groove;
+    margin: 0px;
+}
+
+.histText{
+    margin: 0.3rem;
+    font-size: 1em;
+    text-align: justify;
+    flex-wrap: wrap;
+    
+
+}
+
+#histTitle{
+    grid-area: histTitle;
+    justify-self: center;
+}
+
+#text1{
+    grid-area: text1;
+    align-self: center;
+    text-align: center;
+}
+
+#img1{
+    grid-area: img1;
+    justify-self: center;
+    align-self: center;
+}
+
+#text2{
+    grid-area: text2;
+    align-self: center;    
+}
+
+#img2{
+    grid-area: img2;
+    justify-self: center;
+    align-self: center;
+}
+
+#text3{
+    grid-area: text3;
+    align-self: center;
+}
+
+#img3{
+    grid-area: img3;
+    justify-self: center;
+    align-self: center;
+}
+
+#text4{
+    grid-area: text4;
+    align-self: center;
+}
+
+#img4{
+    grid-area: img4;
+    justify-self: center;
+    align-self: center;
+}
+
+#text5{
+    grid-area: text5;
+    align-self: center;
+}
+
+#img5{
+    grid-area: img5;
+    justify-self: center;
+    align-self: center;
+}
+
+#text6{
+    grid-area: text6;
+    align-self: center;
+}
+
+#img6{
+    grid-area: img6;
+    justify-self: center;
+    align-self: center;
+}
+
+#text7{
+    grid-area: text7;
+    align-self: center;
+}
+
+#img7{
+    grid-area: img7;
+    justify-self: center;
+    align-self: center;
+}
+
+#text8{
+    grid-area: text8;
+    align-self: center;
+}
+
+#img8{
+    grid-area: img8;
+    justify-self: center;
+    align-self: center;
+}
+
+#text9{
+    grid-area: text9;
+    align-self: center;
+}
+
+#img9{
+    grid-area: img9;
+    justify-self: center;
+    align-self: center;
+}
+
+#text10{
+    grid-area: text10;
+    align-self: center;
+}
+
+#img10{
+    grid-area: img10;
+    justify-self: center;
+    align-self: center;
+}
+
+
+
+footer{
+    background-color: rgb(35, 35, 35);
+    background-image: url('../img/amlogo.png');
+    /* background-attachment: fixed; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 0.5rem;
+    font-size: 16px;
+}
+
+footer h4{
+    padding: 0.5rem;  
+    font-size: 1em;
+}
+
+.footerLink{
+    font-size: 0.6em;
+    padding: 0.35rem;
+    color: white;
+    text-decoration: none;
+}
+
+
+@media screen and (min-width:600px){
+
+    /* caracteristicas del titulo */
+
+    .title{
+        font-size: 4rem;
+        margin-top: 3rem;
+        font-weight: 1500;
+    }
+
+    /* caracteristicas del subtitulo */
+
+    .subtitle{
+        font-size: 1.5rem;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        font-weight: 1500;
+    }
+
+    /* caracteristicas del Menu de direccion */
+
+    header nav{
+        margin-bottom: 1rem;
+    }
+
+    header nav ul{
+        justify-content: space-evenly;
+        margin-bottom: 0rem;
+    }
+
+    header nav ul li{
+        margin-bottom: 3rem;
+    }
+
+    header nav ul li a{
+        padding: 0.75rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        border: 3px solid;
+        border-bottom: 6px solid;
+        border-left: 6px solid;
+        font-size: 1rem;
+    }
+
+    /* caracteristicas del Main */
+
+    main{
+        border-radius: 2rem;
+        border-style: solid;
+        border-color: black;
+        padding: 2rem;
+        margin: 1rem;
+        font-size: 1.5em;
+    }
+
+    footer{
+        font-size: 20px;
+    }
+
+    .mainHistoria{
+        font-size: 1.25em;
+    }
+
+    #imgAjust{
+        height: 150px;
+    }
+}
+
+@media screen and (min-width:900px){
+
+    /* caracteristicas del titulo */
+
+    .title{
+        font-family: 'Times New Roman', Times, serif;
+        font-style: italic;
+        font-size: 4.5rem;
+        margin-top: 3rem;
+        font-weight: 1500;
+    }
+
+    /* caracteristicas del subtitulo */
+
+    .subtitle{
+        font-size: 2rem;
+    }
+
+    /* caracteristicas del Menu de direccion */
+
+    header nav{
+        margin-bottom: 1.5rem;
+    }
+
+    header nav ul{
+        justify-content: space-evenly;
+        margin-left: 8%;
+        margin-right: 8%;
+    }
+
+    header nav ul li a{
+        padding: 1rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        border: 4px solid;
+        border-bottom: 8px solid;
+        border-left: 8px solid;
+        font-size: 0.8rem;
+    }
+
+    /* Caracteristicas del index: grid areas */
+
+    .mainIndex{
+        display: grid;
+        grid-template-areas: "imgH titleH titleH"
+                            "imgH textH textH"
+                            "imgH linkH linkH"
+                            "titleD titleD imgD"
+                            "textD textD imgD"
+                            "linkD linkD imgD"
+                            "imgE titleE titleE"
+                            "imgE textE textE"
+                            "imgE linkE linkE"
+                            "titleC titleC imgC"
+                            "textC textC imgC"
+                            "linkC linkC imgC"; 
+        margin: 5%;
+        grid-template-columns: 0.5fr 1fr 0.5fr ;
+        row-gap: 2rem;
+    }
+
+    footer{
+        font-size: 24px;
+    }
+
+    .mainHistoria{
+        font-size: 1.75em;
+    }
+
+    #imgAjust{
+        height: 250px;
+    }
+
+
+
+}
