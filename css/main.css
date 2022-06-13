@@ -40,12 +40,24 @@ header{
     font-weight: 1500;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: ghostwhite;
+    animation-duration: 1.5s;
+    animation-name: reveal_title;
+    animation-iteration-count: infinite
 }
 
-#secondTitle{
-    margin-top: 0rem;
-    margin-bottom: 3rem;
-}
+@keyframes reveal_title {
+    0% {
+      opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0;
+    }
+
+ }
+ 
 
 /* caracteristicas del Menu de direccion */
 
@@ -59,6 +71,8 @@ header nav ul{
     justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 header nav ul li{
@@ -73,9 +87,7 @@ header nav ul li a{
     padding: 0.5rem;
     padding-left: 0.75rem;
     padding-right: 0.75rem;
-    border: 2px solid;
-    border-bottom: 4px solid;
-    border-left: 4px solid;
+    border: 6px solid;
     border-radius: 1rem;
     font-family: 'Times New Roman', Times, serif;
     text-transform: uppercase;
@@ -83,6 +95,12 @@ header nav ul li a{
     font-size: 0.65em;
     color:ghostwhite;
     background-color:darkblue;
+    transition: border 0.4s;
+    margin: 0.5rem;
+}
+
+.mainMenu:hover{
+    border: 3px solid ghostwhite;
 }
 
 /* caracteristicas generales del Main */
@@ -127,8 +145,21 @@ main{
     /* margin: 1rem;
     margin-top: 0rem; */
     color: white;
-    font-size: 1.2em;
+    font-size: 1em;
     height: 100%;
+    padding: 0.2em;
+    margin: 0.2em;
+    border-radius: 20px;
+    border: 2px solid black;
+    border-bottom: 4px solid black;
+    border-left: 4px solid black;
+    /* width: 112.8px; */
+    transition: border-left 0.4s, border-bottom 0.4s;
+}
+
+.mainLink:hover{
+    border-bottom: 8px solid black;
+    border-left: 8px solid black;
 }
 
 /* Caracteristicas del Index-Main
@@ -139,10 +170,11 @@ main{
     grid-template-areas: "titleH titleH"
                          "textH textH"
                          "imgH linkH";
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr 1.3fr;
     justify-content: center;
     justify-items: center;
-    background-color: blue;
+    background: rgb(50,43,131);
+    background: linear-gradient(90deg, rgba(50,43,131,1) 0%, rgba(50,43,131,1) 75%, rgba(140,150,193,1) 100%);
 }
 
 /* Definicion de las areas */
@@ -156,13 +188,13 @@ main{
     grid-area: titleH;
     justify-self: center;
     width: 100%;
-    background-color: cornflowerblue;
+    background: linear-gradient(90deg, rgba(39,22,233,1) 0%, rgba(39,22,233,1) 75%, rgba(140,150,193,1) 100%);;
 }
 
 #textH{
     grid-area: textH;
     text-align: start;
-    background-color:cornflowerblue;
+    background: linear-gradient(90deg, rgba(39,22,233,1) 0%, rgba(39,22,233,1) 75%, rgba(140,150,193,1) 100%);;
 }
 
 #linkH{
@@ -177,10 +209,11 @@ main{
     grid-template-areas:"titleD titleD"
     "textD textD"
     "imgD linkD";
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr 1.3fr;
     justify-content: center;
     justify-items: center;
-    background-color:darkgoldenrod ;
+    background: rgb(159,119,15);
+    background: linear-gradient(90deg, rgba(159,119,15,1) 0%, rgba(159,119,15,1) 75%, rgba(226,200,135,1) 100%); ;
 }
 
 #imgD{
@@ -192,13 +225,15 @@ main{
     grid-area: titleD;
     justify-self: center;
     width: 100%;
-    background-color:goldenrod;
+    background: rgb(221,164,18);
+    background: linear-gradient(90deg, rgba(221,164,18,1) 0%, rgba(221,164,18,1) 75%, rgba(226,200,135,1) 100%);;
 }
 
 #textD{
     grid-area: textD;
     text-align: start;
-    background-color:goldenrod;
+    background: rgb(221,164,18);
+    background: linear-gradient(90deg, rgba(221,164,18,1) 0%, rgba(221,164,18,1) 75%, rgba(226,200,135,1) 100%);;
 }
 
 #linkD{
@@ -214,10 +249,11 @@ main{
     grid-template-areas: "titleE titleE"
     "textE textE"
     "imgE linkE";
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr 1.3fr;
     justify-content: center;
     justify-items: center;
-    background-color:brown ;
+    background: rgb(165,42,42);
+    background: linear-gradient(90deg, rgba(165,42,42,1) 0%, rgba(165,42,42,1) 75%, rgba(190,123,123,1) 100%);;
 }
 
 #imgE{
@@ -229,13 +265,15 @@ main{
     grid-area: titleE;
     justify-self: center;
     width: 100%;
-    background-color: tomato;
+    background: rgb(222,79,79);
+    background: linear-gradient(90deg, rgba(222,79,79,1) 0%, rgba(222,79,79,1) 75%, rgba(190,123,123,1) 100%);;
 }
 
 #textE{
     grid-area: textE;
     text-align: start;
-    background-color: tomato;
+    background: rgb(222,79,79);
+    background: linear-gradient(90deg, rgba(222,79,79,1) 0%, rgba(222,79,79,1) 75%, rgba(190,123,123,1) 100%);;
 }
 
 #linkE{
@@ -249,10 +287,11 @@ main{
     grid-template-areas: "titleC titleC"
     "textC textC"
     "imgC linkC";
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr 1.3fr;
     justify-content: center;
     justify-items: center;
-    background-color:seagreen ;
+    background: rgb(19,83,48);
+    background: linear-gradient(90deg, rgba(19,83,48,1) 0%, rgba(19,83,48,1) 75%, rgba(102,172,133,1) 100%);;
 }
 
 #imgC{
@@ -264,13 +303,15 @@ main{
     grid-area: titleC;
     justify-self: center;
     width: 100%;
-    background-color:cadetblue;
+    background: rgb(34,115,70);
+    background: linear-gradient(90deg, rgba(34,115,70,1) 0%, rgba(34,115,70,1) 75%, rgba(102,172,133,1) 100%); ;
 }
 
 #textC{
     grid-area: textC;
     text-align: start;
-    background-color:cadetblue;
+    background: rgb(34,115,70);
+    background: linear-gradient(90deg, rgba(34,115,70,1) 0%, rgba(34,115,70,1) 75%, rgba(102,172,133,1) 100%); ;
 }
 
 #linkC{
@@ -533,8 +574,20 @@ main{
     color: white;
     text-decoration: none;
     text-align: center;
+    padding: 3px;
     font-size: 1em;
+    border: 2px solid white;
+    border-bottom: 4px solid white;
+    border-left: 4px solid white;
+    border-radius: 20px;
+    transition: border-left 0.4s, border-bottom 0.4s;
 }
+
+.discLink:hover{
+    border-bottom: 8px solid white;
+    border-left: 8px solid white;
+}
+
 
 .discImgAjust{
     margin-left: 10%;
@@ -700,7 +753,6 @@ footer h4{
     color: white;
     text-decoration: none;
 }
-
 
 
 
