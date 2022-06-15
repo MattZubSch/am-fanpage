@@ -64,7 +64,14 @@ header{
     text-align: center;
 }
 
-header nav ul{
+.color-and-bg{
+    background-color:dodgerblue;
+    color: white;
+    margin: 0px;
+    
+}
+
+/* header nav ul{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -95,13 +102,19 @@ header nav ul li a{
     background-color:darkblue;
     transition: border 0.4s;
     margin: 0.5rem;
-}
+} 
 
 .mainMenu:hover{
     border: 3px solid ghostwhite;
-}
+} */
 
 /* caracteristicas generales del Main */
+
+.bootLink{
+    color: white;
+    align-self: center;
+    text-align: center;
+}
 
 main{
     font-size: 16px;
@@ -824,6 +837,10 @@ footer h4{
     padding-top: 0.6em;
     color: white;
     text-decoration: none;
+}
+
+.fs-c{
+    font-size: 12px;
 }
 
 
