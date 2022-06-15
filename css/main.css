@@ -7,11 +7,6 @@
 
 body{
     color: white;
-    /* background-image: url('../img/back2.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center; */
     background-color: black;
 }
 
@@ -53,7 +48,10 @@ header{
         opacity: 1;
     }
     80% {
-        opacity: 0;
+        opacity: 0.5;
+    }
+    90% {
+        opacity: 1;
     }
 
  }
@@ -107,14 +105,15 @@ header nav ul li a{
 
 main{
     font-size: 16px;
-
 }
+
+
 
 /* Caracteristicas de los titulos del main */
 .mainTitle{
     font-family: 'Times New Roman', Times, serif;
     text-transform: uppercase;
-    font-size: 2.5em;
+    font-size: 2.5rem;
     text-align: center;
     font-style: italic;
     font-weight: 1000;
@@ -154,13 +153,21 @@ main{
     border-bottom: 4px solid black;
     border-left: 4px solid black;
     /* width: 112.8px; */
-    transition: border-left 0.4s, border-bottom 0.4s;
+    transition: all 0.4s;
 }
 
 .mainLink:hover{
     border-bottom: 8px solid black;
     border-left: 8px solid black;
+    transform: translate(4px, -4px);
 }
+
+.mainLink:active{
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    transform: translate(-2px, 2px);
+}
+
 
 /* Caracteristicas del Index-Main
         Display Grid */
@@ -321,7 +328,7 @@ main{
 }
 
 
-/* Caracteristicas del Main */
+/* Caracteristicas del Main Historia */
 
 .mainHistoria{
     padding: 0.8rem;
@@ -574,18 +581,29 @@ main{
     color: white;
     text-decoration: none;
     text-align: center;
+    display: flex;
     padding: 3px;
     font-size: 1em;
     border: 2px solid white;
     border-bottom: 4px solid white;
     border-left: 4px solid white;
     border-radius: 20px;
-    transition: border-left 0.4s, border-bottom 0.4s;
+    transition: all 0.4s;
+    
 }
 
 .discLink:hover{
     border-bottom: 8px solid white;
     border-left: 8px solid white;
+    transform: translate(4px, -4px);
+    margin: -2px;
+}
+
+.discLink:active{
+    border-bottom: 2px solid white;
+    border-left: 2px solid white;
+    margin: 0.8px;
+    transform: translate(-2px, 2px);
 }
 
 
@@ -724,6 +742,60 @@ main{
     margin: 5%;
 }
 
+/* caracteristicas de Eventos */
+
+.mainEvent{
+    font-size: 16px;
+    background-color: rgb(94, 198, 163);
+    color: black;
+    padding-bottom: 2rem;
+}
+
+.mainTitle{
+    font-size: 2.5em;
+    background-color: black;
+    color: white;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.table{
+    display: flex;
+    justify-content: center;
+    margin: 5%;
+    border-collapse: collapse;
+    /* border: 5px solid; */
+    /* width: 100%; */
+}
+
+tbody{
+    width: 100%;
+}
+
+.firstColumn{
+    width: 25%;
+    border: 3px solid rgb(31, 27, 27);
+    text-align: center;
+}
+
+.secondColumn{
+    width: 65%;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    border: 3px solid rgb(31, 27, 27);
+    text-align: center;
+}
+
+.fusionColumn{
+    /* display: none; */
+    text-transform: capitalize;
+    font-size: 1rem;
+}
+
+.thirdColumn{
+    display: none;
+    border: 3px solid rgb(31, 27, 27);
+}
 
 
 
@@ -807,6 +879,17 @@ footer h4{
                              "text10 text10 img10"; 
         row-gap: 1em; 
     }  
+
+
+    .histImg{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .histText{
+        display: flex;
+        flex-direction: column;
+    }
 
     #img1{
         margin-left: 1rem;
@@ -893,6 +976,49 @@ footer h4{
         text-align: start;
     }
 
+    .mainEvent{
+        font-size: 20px;
+    }
+    
+    .table{
+        display: flex;
+        justify-content: center;
+        margin: 5%;
+        border-collapse: separate;
+        border: 5px solid rgb(31, 27, 27);
+    }
+    
+    /* tbody{
+        width: 100%;
+    } */
+    
+    .firstColumn{
+        width: 18%;
+        border: 1px solid rgb(31, 27, 27);
+        text-align: center;
+    }
+    
+    .secondColumn{
+        width: 50%;
+        text-transform: uppercase;
+        font-size: 1.25rem;
+        border: 1px solid rgb(31, 27, 27);
+        text-align: center;
+    }
+    
+    .fusionColumn{
+        display: none;
+    }
+    
+    .thirdColumn{
+        display:inline-table;
+        height: 100%;
+        width: 100%;
+        border: 1px solid rgb(31, 27, 27);
+    }
+
+
+
     footer{
         font-size: 20px;
     }
@@ -923,6 +1049,10 @@ footer h4{
         justify-content: space-evenly;
         margin-left: 10%;
         margin-right: 10%;
+    }
+
+    header nav ul li{
+        margin-bottom: 3rem;
     }
 
     header nav ul li a{
