@@ -8,6 +8,10 @@
 body{
     color: white;
     background-color: black;
+    background-image: url(../img/bg2.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 header{
@@ -15,12 +19,10 @@ header{
     flex-direction: column;
     flex-wrap: nowrap;
     text-align: center;
-    /* padding-top: 3rem; */
-    background-image: url(../img/header-final.jpg);
+    background-image: url(../img/aniceheader.png);
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
+    background-attachment: fixed;
     background-size: cover;
-    /* background-position: initial; */
     background-position: center;
     color:black;
     font-size: 16px;
@@ -30,14 +32,14 @@ header{
     font-family: 'Times New Roman', Times, serif;
     font-style: italic;
     font-size: 3em;
-    margin-top: 5rem;
-    margin-bottom: 10rem;
-    font-weight: 1500;
+    margin: 5rem;
+    margin-bottom: 12rem;
+    font-weight: 1000;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: ghostwhite;
     animation-duration: 1.5s;
     animation-name: reveal_title;
-    animation-iteration-count: infinite
+    animation-iteration-count:infinite;
 }
 
 @keyframes reveal_title {
@@ -60,7 +62,6 @@ header{
 /* caracteristicas del Menu de direccion */
 
 .menu{
-    /* margin: 2rem; */
     text-align: center;
 }
 
@@ -68,12 +69,11 @@ header{
     background-color:dodgerblue;
     color: white;
     margin: 0px;
-    
 }
 
-/* header nav ul{
+header nav ul{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     margin-bottom: 2rem;
     padding-top: 1rem;
@@ -84,29 +84,36 @@ header nav ul li{
     list-style: none;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    
+    transition: all 0.4s;
 }
 
-header nav ul li a{
+header nav ul li:hover{
+    margin-bottom: 0rem;
+}
+
+.mainMenu{
     text-decoration: none;
-    padding: 0.5rem;
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-    border: 6px solid;
+    padding: 1rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    border: 6px solid white;
     border-radius: 1rem;
     font-family: 'Times New Roman', Times, serif;
     text-transform: uppercase;
     font-weight: 1000;
-    font-size: 0.65em;
-    color:ghostwhite;
+    font-size: 1em;
+    color:white;
     background-color:darkblue;
-    transition: border 0.4s;
-    margin: 0.5rem;
+    transition: all 0.4s;
 } 
 
 .mainMenu:hover{
-    border: 3px solid ghostwhite;
-} */
+    border: 12px solid white;
+    padding: 1.5rem;
+    padding-left: 1.8rem;
+    padding-right: 1.8rem;
+    font-size: 1.2em;
+}
 
 /* caracteristicas generales del Main */
 
@@ -118,6 +125,11 @@ header nav ul li a{
 
 main{
     font-size: 16px;
+    background-image: url(../img/bg2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 
@@ -130,32 +142,25 @@ main{
     text-align: center;
     font-style: italic;
     font-weight: 1000;
+    margin: 5%;
+    margin-top: 0%;
+    padding-top: 5%;
 }
 
 /* Caracteristicas de los textos del main */
 .mainText{
-    /* margin: 1rem;
-    margin-bottom: 1rem; */
     margin: 0.8em;
     font-size: 1.1em;
-    /* text-align: center; */
 }
 
 /* caracteristicas de las fotos  */
 .mainImg{
-    /* border-radius: 10px; */
-    /* border-style: groove; */
-    /* margin-top: 1rem; */
-    /* width: 100%;
-    height: 100%; */
     width: 100%;
     height: 100%;
 }
 
 /* Caracteristicas de los enlaces del main */
 .mainLink{
-    /* margin: 1rem;
-    margin-top: 0rem; */
     color: white;
     font-size: 1em;
     height: 100%;
@@ -165,7 +170,6 @@ main{
     border: 2px solid black;
     border-bottom: 4px solid black;
     border-left: 4px solid black;
-    /* width: 112.8px; */
     transition: all 0.4s;
 }
 
@@ -183,7 +187,8 @@ main{
 
 
 /* Caracteristicas del Index-Main
-        Display Grid */
+        Display Grid 
+        NO UTILIZADO: maquetado con bootstrap*/
 
 .mainIndexI{
     display: grid;
@@ -571,15 +576,12 @@ main{
 .discImage{
     margin: 0px;
     width: 100%;
-    /* height: 100%; */
     justify-self: center;
 }
 
 .discSubtitle{
     text-align: center;
     font-style: italic;
-    /* margin-left: 3%;
-    margin-right: 3%; */
     font-size: 1.5em;
     width: 100%;
 }
@@ -755,61 +757,70 @@ main{
     margin: 5%;
 }
 
-/* caracteristicas de Eventos */
 
-.mainEvent{
-    font-size: 16px;
-    background-color: rgb(94, 198, 163);
-    color: black;
-    padding-bottom: 2rem;
-}
+/* Caractetisticas de la pestaña Eventos */
 
-.mainTitle{
-    font-size: 2.5em;
-    background-color: black;
-    color: white;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-}
 
 .table{
-    display: flex;
-    justify-content: center;
-    margin: 5%;
-    border-collapse: collapse;
-    /* border: 5px solid; */
-    /* width: 100%; */
-}
-
-tbody{
-    width: 100%;
-}
-
-.firstColumn{
-    width: 25%;
-    border: 3px solid rgb(31, 27, 27);
-    text-align: center;
-}
-
-.secondColumn{
-    width: 65%;
-    text-transform: uppercase;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
     font-size: 1.25rem;
-    border: 3px solid rgb(31, 27, 27);
-    text-align: center;
 }
 
-.fusionColumn{
-    /* display: none; */
-    text-transform: capitalize;
-    font-size: 1rem;
+.eventName{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
-.thirdColumn{
-    display: none;
-    border: 3px solid rgb(31, 27, 27);
+.eventNameDesktop{
+    font-weight: 1000;
+    font-size: 1.5em;
 }
 
+.location{
+    text-align: end;
+}
+
+/* Caracteristicas del formulario de Contacto */
+
+.form{
+    padding: 5%;
+}
+
+.buttonForm{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 5%;
+}
+
+.buttonGrid{
+    padding: 3px;
+    border: 4px solid;
+    border-left: 8px solid;
+    border-bottom: 8px solid;
+    border-radius: 1rem;
+    transition: all 0.4s;
+    /* background-color: lightgrey; */
+}
+
+.buttonGrid:hover{
+    border-bottom: 12px solid black;
+    border-left: 12px solid black;
+    transform: translate(4px, -4px);
+    margin: -2px;
+}
+
+.buttonGrid:active{
+    border-bottom: 4px solid black;
+    border-left: 4px solid black;
+    transform: translate(-2px, 2px);
+    margin: 0.8px;
+    background-color: lightgrey;
+}
 
 
 
@@ -844,6 +855,18 @@ footer h4{
 }
 
 
+@media screen and (max-width:600px){
+    .eventNameDesktop{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width:899px){
+    .menu2{
+        display: none;
+    }
+}
 
 @media screen and (min-width:600px){
     /* caracteristicas del titulo */
@@ -997,59 +1020,23 @@ footer h4{
         font-size: 20px;
     }
     
-    .table{
-        display: flex;
-        justify-content: center;
-        margin: 5%;
-        border-collapse: separate;
-        border: 5px solid rgb(31, 27, 27);
-    }
-    
-    /* tbody{
-        width: 100%;
-    } */
-    
-    .firstColumn{
-        width: 18%;
-        border: 1px solid rgb(31, 27, 27);
-        text-align: center;
-    }
-    
-    .secondColumn{
-        width: 50%;
-        text-transform: uppercase;
-        font-size: 1.25rem;
-        border: 1px solid rgb(31, 27, 27);
-        text-align: center;
-    }
-    
-    .fusionColumn{
+
+    .eventName{
         display: none;
     }
-    
-    .thirdColumn{
-        display:inline-table;
-        height: 100%;
-        width: 100%;
-        border: 1px solid rgb(31, 27, 27);
-    }
-
 
 
     footer{
         font-size: 20px;
     }
+
+    .fs-c{
+        font-size: 16px;
+    }
+
 }
 
 @media screen and (min-width:900px){
-    body{
-        /* background-color: rgb(1, 1, 37); */
-        background-image: url(../img/header-final.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-    }
 
     .mainHistoria{
         border-radius: 2rem;
@@ -1059,6 +1046,10 @@ footer h4{
         margin: 1rem;
         margin-top: 0rem;
         margin-bottom: 3rem;
+    }
+
+    .navbar{
+        display: none;
     }
 
     /* caracteristicas del Menu de direccion */
@@ -1099,6 +1090,10 @@ footer h4{
 
     footer{
         font-size: 24px;
+    }
+
+    .fs-c{
+        font-size: 20px;
     }
 }
 
