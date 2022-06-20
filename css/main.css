@@ -57,6 +57,22 @@ header{
     }
 
  }
+
+
+ .indexTitle{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 3em;
+    font-size: 3em;
+    margin-top: 5rem;
+    margin-bottom: 12rem;
+    font-weight: 1000;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: ghostwhite;
+    animation-duration: 1.5s;
+    animation-name: reveal_title;
+    animation-iteration-count:infinite;
+ }
  
 
 /* caracteristicas del Menu de direccion */
@@ -373,7 +389,7 @@ main{
                          "text10 text10 text10"
                          "img10 img10 img10";
     row-gap: 1rem;    
-    background-image: url('../img/background.jpg');
+    background-image: url('../img/bg2-desen.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -536,7 +552,7 @@ main{
 /* Main discografia */
 
 .mainDisc{
-    background-image: url('../img/background.jpg');
+    background-image: url('../img/bg2-desen.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -877,6 +893,11 @@ footer h4{
         font-weight: 1500;
     }
 
+    .indexTitle{
+        font-size: 4em;
+        margin-top: 3rem;
+    }
+
     /* caracteristicas del Menu de direccion */
     header nav{
         margin-bottom: 1.5rem;
@@ -1044,7 +1065,7 @@ footer h4{
         border-color: gray;
         padding: 2rem;
         margin: 1rem;
-        margin-top: 0rem;
+        margin-top: 2rem;
         margin-bottom: 3rem;
     }
 
@@ -1083,9 +1104,10 @@ footer h4{
         border-style: solid;
         border-color: gray;
         padding: 2rem;
-        margin: auto;
+        margin: 1rem;
+        margin-top: 2rem;
         margin-bottom: 3rem;
-        width: 968px;
+        /* width: 968px; */
     }
 
     footer{
@@ -1101,6 +1123,15 @@ footer h4{
     .mainHistoria{
         width: 1068px;
         margin: auto;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+        justify-self: center;
+    }
+
+    .mainDisc{
+        width: 1068px;
+        margin: auto;
+        margin-top: 2rem;
         margin-bottom: 3rem;
         justify-self: center;
     }
