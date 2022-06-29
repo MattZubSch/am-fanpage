@@ -3,7 +3,6 @@
 //imports
 
 @import "utilities/variables";
-
 /* reset */
 *{
     margin: 0;
@@ -34,7 +33,7 @@ body{
         h1{
             font-family: 'Times New Roman', Times, serif;
             font-style: italic;
-            font-size: $tamano-letra * 3;
+            font-size: map-get($estilos-titulos, titulo-header);
             margin-bottom: 12rem;
             padding-top: 5rem;
             font-weight: 1000;
@@ -102,6 +101,17 @@ body{
             text-align: center;
         }
     }
+    .mainTitle{
+        font-family: 'Times New Roman', Times, serif;
+        text-transform: uppercase;
+        font-size: map-get($estilos-titulos, titulo-princ);
+        text-align: center;
+        font-style: italic;
+        font-weight: 1000;
+        margin: 5%;
+        margin-top: 0%;
+        padding-top: 5%;
+    }
     .mainHistoria{
         /* Caracteristicas del Main Historia */
         padding: 0.8rem;
@@ -129,9 +139,7 @@ body{
                              "img10 img10 img10";
         row-gap: 1rem;    
         background-image: url('../img/bg2-desen.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+        @include backgrounds;
         background-attachment: fixed;
         .histImg{
             border-radius: 1rem;
@@ -150,138 +158,158 @@ body{
             grid-area: histTitle;
             justify-self: center;
         }
-        #text1{
-            grid-area: text1;
-            align-self: center;
-            text-align: center;
+        @each $text, $grid in $grid-hist-text {
+            ##{$grid} {
+                grid-area: $grid;
+                @include hist-text;
+            }
         }
-        #img1{
-            grid-area: img1;
-            justify-self: center;
-            align-self: center;
-            margin-left: $margin-hist;
-            margin-right: $margin-hist;
-        }
-        #text2{
-            grid-area: text2;
-            align-self: center;    
-        }
-        #img2{
-            grid-area: img2;
-            justify-self: center;
-            align-self: center;
-            margin-left: $margin-hist;
-            margin-right: $margin-hist;
-        }
-        #text3{
-            grid-area: text3;
-            align-self: center;
-        }
-        #img3{
-            grid-area: img3;
-            justify-self: center;
-            align-self: center;
-            margin-left: $margin-hist;
-            margin-right: $margin-hist;
-        }
-        #text4{
-            grid-area: text4;
-            align-self: center;
-        }
-        #img4{
-            grid-area: img4;
-            justify-self: center;
-            align-self: center;
-            margin-left: $margin-hist;
-            margin-right: $margin-hist;
-        }
-        #text5{
-            grid-area: text5;
-            align-self: center;
-        }
-        #img5{
-            grid-area: img5;
-            justify-self: center;
-            align-self: center;
-            margin-left: $margin-hist;
-            margin-right: $margin-hist;
-        }
-        #text6{
-            grid-area: text6;
-            align-self: center;
-        }
-        #img6{
-            grid-area: img6;
-            justify-self: center;
-            align-self: center;
-            margin-left: $margin-hist;
-            margin-right: $margin-hist;
-        }
-        #text7{
-            grid-area: text7;
-            align-self: center;
-        }
-        #img7{
-            grid-area: img7;
-            justify-self: center;
-            align-self: center;
-            margin-left: $margin-hist;
-            margin-right: $margin-hist;
-        }
-        #text8{
-            grid-area: text8;
-            align-self: center;
-        }
-        #img8{
-            grid-area: img8;
-            justify-self: center;
-            align-self: center;
-            margin-left: $margin-hist;
-            margin-right: $margin-hist;
-        }
-        #text9{
-            grid-area: text9;
-            align-self: center;
-        }
-        #img9{
-            grid-area: img9;
-            justify-self: center;
-            align-self: center;
-            margin-left: $margin-hist;
-            margin-right: $margin-hist;
-        }
-        #text10{
-            grid-area: text10;
-            align-self: center;
-        }
-        #img10{
-            grid-area: img10;
-            justify-self: center;
-            align-self: center;
-            margin-left: $margin-hist;
-            margin-right: $margin-hist;
+        @each $img, $grid in $grid-hist-img {
+            ##{$grid} {
+                grid-area: $grid;
+                @include hist-img;
+            }
         }
     }
-    footer{
-        background-color: $color-footer;
-        background-image: url('../img/amlogo.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        padding: 0.5rem;
-        h4{
-            font-size: $tamano-letra;
+    .mainDisc{
+        background-image: url('../img/bg2-desen.jpg');
+        @include backgrounds;
+        background-attachment: fixed;
+        display: grid;
+        grid-template-areas: "dTitle"
+                             "discTitle1"
+                             "discImg1"
+                             "discText1" 
+                             "discLink1"
+                             "discTitle2"
+                             "discImg2"
+                             "discText2" 
+                             "discLink2"
+                             "discTitle3"
+                             "discImg3"
+                             "discText3" 
+                             "discLink3"
+                             "discTitle4"
+                             "discImg4"
+                             "discText4" 
+                             "discLink4"
+                             "discTitle5"
+                             "discImg5"
+                             "discText5" 
+                             "discLink5"
+                             "discTitle6"
+                             "discImg6"
+                             "discText6" 
+                             "discLink6";
+        justify-content: center;
+        justify-items: center;
+        row-gap: 1rem;
+        font-size: 16px; 
+        .discImage{
+            margin: 0px;
+            width: 100%;
+            justify-self: center;
         }
-        .footerLink{
-            font-size: $tamano-letra * 0.8;
-            padding: 0.4rem;
-            padding-top: 0.6rem;
-            color: $color-p-letra;
+        .discSubtitle{
+            text-align: center;
+            font-style: italic;
+            font-size: map-get($map: $estilos-titulos, $key: titulo-sec);
+            width: 100%;
+        }
+        .discText{
+            text-align: center;
+            margin: 5%;
+            font-size: 1.2em;
+        }
+        .discLink{
+            color: white;
             text-decoration: none;
+            text-align: center;
+            display: flex;
+            padding: 3px;
+            font-size: 1em;
+            border: 2px solid white;
+            border-bottom: 4px solid white;
+            border-left: 4px solid white;
+            border-radius: 20px;
+            transition: all 0.4s; 
         }
+        .discLink:hover{
+            border-bottom: 8px solid white;
+            border-left: 8px solid white;
+            transform: translate(4px, -4px);
+            margin: -2px;
+        }
+        .discLink:active{
+            border-bottom: 2px solid white;
+            border-left: 2px solid white;
+            margin: 0.8px;
+            transform: translate(-2px, 2px);
+        }
+        .discImgAjust{
+            margin-left: 10%;
+            margin-right: 10%;
+            align-self: center;
+        }
+        #dTitle{
+            grid-area: dTitle;
+        }
+        @each $title, $grid in $grid-disc-title {
+            ##{$grid} {
+                grid-area: $grid;
+                @include disc-title;
+            }
+        }
+        @each $link, $grid in $grid-disc-link {
+            ##{$grid} {
+            grid-area: $grid;
+            @include disc-link;
+            }
+        }
+        @each $rest, $grid in $grid-disc-img-text {
+            ##{$grid} {
+                grid-area: $grid;
+            }
+        }
+    }
+    .table{
+        color: white;
+        font-family: 'Times New Roman', Times, serif;
+        font-style: italic;
+        font-size: $tamano-letra * 1.25;
+        .eventName{
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .eventNameDesktop{
+            font-weight: 1000;
+            font-size: 1.5em;
+        }
+        .location{
+            text-align: end;
+        }
+    }
+
+}
+
+footer{
+    background-color: $color-footer;
+    background-image: url('../img/amlogo.png');
+    @include backgrounds;
+    padding: 0.5rem;
+    h4{
+        font-size: $tamano-letra;
+     }
+    .footerLink{
+        font-size: $tamano-letra * 0.8;
+        padding: 0.4rem;
+        padding-top: 0.6rem;
+        color: $color-p-letra;
+        text-decoration: none;
     }
 }
 
 
-@import "utilities/css";
-@import "utilities/media-queries"
+//@import "utilities/css";
+//@import "utilities/media-queries"
