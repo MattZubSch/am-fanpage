@@ -88,12 +88,7 @@ body{
         }
     }
     main{
-        /* Cacteristicas del Main */
-        background-image: url(../img/bg2.jpg);
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
+        @extend body;
         .bootLink{
             /* Carac de botones del Index */
             color: white;
@@ -138,9 +133,8 @@ body{
                              "text10 text10 text10"
                              "img10 img10 img10";
         row-gap: 1rem;    
+        @extend body;
         background-image: url('../img/bg2-desen.jpg');
-        @include backgrounds;
-        background-attachment: fixed;
         .histImg{
             border-radius: 1rem;
             border-style: groove;
@@ -172,9 +166,8 @@ body{
         }
     }
     .mainDisc{
+        @extend body;
         background-image: url('../img/bg2-desen.jpg');
-        @include backgrounds;
-        background-attachment: fixed;
         display: grid;
         grid-template-areas: "dTitle"
                              "discTitle1"
@@ -290,6 +283,37 @@ body{
             text-align: end;
         }
     }
+    .form{
+        padding: 5%;
+        .buttonForm{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+            padding-bottom: 5%;
+            .buttonGrid{
+                padding: 3px;
+                border: 4px solid;
+                border-left: 8px solid;
+                border-bottom: 8px solid;
+                border-radius: 1rem;
+                transition: all 0.4s;
+            }
+            .buttonGrid:hover{
+                border-bottom: 12px solid black;
+                border-left: 12px solid black;
+                transform: translate(4px, -4px);
+                margin: -2px;
+            }
+            .buttonGrid:active{
+                border-bottom: 4px solid black;
+                border-left: 4px solid black;
+                transform: translate(-2px, 2px);
+                margin: 0.8px;
+                background-color: lightgrey;
+            }
+        }
+    }
 
 }
 
@@ -310,6 +334,4 @@ footer{
     }
 }
 
-
-//@import "utilities/css";
-//@import "utilities/media-queries"
+@import "utilities/media-queries"

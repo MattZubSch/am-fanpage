@@ -103,19 +103,15 @@ $grid-disc-img-text: (
     img4: discImg4,
     img5: discImg5,
     img6: discImg6,
-    text1: disctext1,
-    text2: disctext2,
-    text3: disctext3,
-    text4: disctext4,
-    text5: disctext5,
-    text6: disctext6
+    text1: discText1,
+    text2: discText2,
+    text3: discText3,
+    text4: discText4,
+    text5: discText5,
+    text6: discText6
 );
 
-@each $grid in $grid-disc-img-text {
-    ##{$grid} {
-        grid-area: $grid;
-    }
-}
+
 
 
 //mixin fondos
@@ -124,4 +120,23 @@ $grid-disc-img-text: (
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+
+@mixin main-tablet {
+    border-radius: 2rem;
+    border-style: solid;
+    border-color: gray;
+    padding: 2rem;
+    margin: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+@mixin main-desktop {
+    width: 1068px;
+        margin: auto;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+        justify-self: center;
 }
