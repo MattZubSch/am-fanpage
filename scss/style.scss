@@ -30,6 +30,7 @@ body{
         background-size: cover;
         background-position: center;
         color: $color-secundario;
+        /* Titulo Principal */
         h1{
             font-family: 'Times New Roman', Times, serif;
             font-style: italic;
@@ -43,11 +44,13 @@ body{
             animation-name: reveal_title;
             animation-iteration-count:infinite;
         }
+        /* color del menu de navegacion desplegable */
         .color-and-bg{
             background-color:dodgerblue;
             margin: 0px;
             color: $color-p-letra;
         }
+        /* caracteristicas del Menu secundario */
         .menu2{
             text-align: center;
             ul{
@@ -76,6 +79,7 @@ body{
                         background-color: $bg-nav;
                         transition: all $transiciones;
                     }
+                    /* animaciones del menu secundario */
                     .mainMenu:hover{
                         border: 12px solid white;
                         padding: 1.5rem;
@@ -87,8 +91,15 @@ body{
             }
         }
     }
+    /* Contenido principal -main- */
     main{
         @extend body;
+        /* Caracteristicas del Index secundario */
+        .mainContent{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
         .bootLink{
             /* Carac de botones del Index */
             color: white;
@@ -96,6 +107,7 @@ body{
             text-align: center;
         }
     }
+    /* caracteristicas de los titulos de navegacion */
     .mainTitle{
         font-family: 'Times New Roman', Times, serif;
         text-transform: uppercase;
@@ -107,8 +119,8 @@ body{
         margin-top: 0%;
         padding-top: 5%;
     }
+    /* caracteristicas del Main Historia */
     .mainHistoria{
-        /* Caracteristicas del Main Historia */
         padding: 0.8rem;
         display: grid;
         grid-template-areas: "histTitle histTitle histTitle" 
@@ -135,6 +147,7 @@ body{
         row-gap: 1rem;    
         @extend body;
         background-image: url('../img/bg2-desen.jpg');
+        /* caracteristicas de los elementos de la pagina Historia*/
         .histImg{
             border-radius: 1rem;
             border-style: groove;
@@ -152,6 +165,7 @@ body{
             grid-area: histTitle;
             justify-self: center;
         }
+        /* bucle para generar los id del Grid*/
         @each $text, $grid in $grid-hist-text {
             ##{$grid} {
                 grid-area: $grid;
@@ -165,8 +179,8 @@ body{
             }
         }
     }
+    /* caracteristicas de la pagina Discografia*/
     .mainDisc{
-        @extend body;
         background-image: url('../img/bg2-desen.jpg');
         display: grid;
         grid-template-areas: "dTitle"
@@ -198,6 +212,7 @@ body{
         justify-items: center;
         row-gap: 1rem;
         font-size: 16px; 
+        /* caracteristicas de los elementos de la pagina Discografia*/
         .discImage{
             margin: 0px;
             width: 100%;
@@ -227,6 +242,7 @@ body{
             border-radius: 20px;
             transition: all 0.4s; 
         }
+        /* animaciones de los links */
         .discLink:hover{
             border-bottom: 8px solid white;
             border-left: 8px solid white;
@@ -244,6 +260,7 @@ body{
             margin-right: 10%;
             align-self: center;
         }
+        /* bucle para generar los id del Grid*/
         #dTitle{
             grid-area: dTitle;
         }
@@ -265,6 +282,7 @@ body{
             }
         }
     }
+    /* Caracteristicas de la pagina Eventos */ 
     .table{
         color: white;
         font-family: 'Times New Roman', Times, serif;
@@ -283,6 +301,7 @@ body{
             text-align: end;
         }
     }
+    /* Caracteristicas de la pagina Contacto */ 
     .form{
         padding: 5%;
         .buttonForm{
@@ -316,7 +335,7 @@ body{
     }
 
 }
-
+/* Caracteristicas del pie de pagina -footer- */ 
 footer{
     background-color: $color-footer;
     background-image: url('../img/amlogo.png');
@@ -333,5 +352,5 @@ footer{
         text-decoration: none;
     }
 }
-
+/* Llamado al archivo de media queries */ 
 @import "utilities/media-queries"

@@ -5,15 +5,21 @@
   box-sizing: border-box; }
 
 /* Configuraciones generales del Body */
-body, body main, body .mainHistoria, body .mainDisc {
+body, body main, body .mainHistoria {
   color: white;
   font-size: 1rem;
   background-image: url(../img/bg2.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  /* Configuraciones del Header */ }
-  body header, body .mainHistoria header, body .mainDisc header {
+  /* Configuraciones del Header */
+  /* Contenido principal -main- */
+  /* caracteristicas de los titulos de navegacion */
+  /* caracteristicas del Main Historia */
+  /* caracteristicas de la pagina Discografia*/
+  /* Caracteristicas de la pagina Eventos */
+  /* Caracteristicas de la pagina Contacto */ }
+  body header, body .mainHistoria header {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -23,8 +29,11 @@ body, body main, body .mainHistoria, body .mainDisc {
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-    color: black; }
-    body header h1, body .mainHistoria header h1, body .mainDisc header h1 {
+    color: black;
+    /* Titulo Principal */
+    /* color del menu de navegacion desplegable */
+    /* caracteristicas del Menu secundario */ }
+    body header h1, body .mainHistoria header h1 {
       font-family: 'Times New Roman', Times, serif;
       font-style: italic;
       font-size: 3rem;
@@ -52,7 +61,8 @@ body, body main, body .mainHistoria, body .mainDisc {
         body header .menu2 ul li {
           list-style: none;
           margin-top: 1rem;
-          margin-bottom: 1rem; }
+          margin-bottom: 1rem;
+          /* animaciones del menu secundario */ }
           body header .menu2 ul li .mainMenu {
             text-decoration: none;
             padding: 1rem;
@@ -73,11 +83,17 @@ body, body main, body .mainHistoria, body .mainDisc {
             padding-left: 1.8rem;
             padding-right: 1.8rem;
             font-size: 1.2em; }
-  body main .bootLink {
-    /* Carac de botones del Index */
-    color: white;
-    align-self: center;
-    text-align: center; }
+  body main, body .mainHistoria main {
+    /* Caracteristicas del Index secundario */ }
+    body main .mainContent {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+    body main .bootLink {
+      /* Carac de botones del Index */
+      color: white;
+      align-self: center;
+      text-align: center; }
   body .mainTitle {
     font-family: 'Times New Roman', Times, serif;
     text-transform: uppercase;
@@ -89,12 +105,13 @@ body, body main, body .mainHistoria, body .mainDisc {
     margin-top: 0%;
     padding-top: 5%; }
   body .mainHistoria {
-    /* Caracteristicas del Main Historia */
     padding: 0.8rem;
     display: grid;
     grid-template-areas: "histTitle histTitle histTitle"  "text1 text1 text1" "img1 img1 img1" "text2 text2 text2" "img2 img2 img2" "text3 text3 text3" "img3 img3 img3" "text4 text4 text4" "img4 img4 img4" "text5 text5 text5" "img5 img5 img5" "text6 text6 text6" "img6 img6 img6" "text7 text7 text7" "img7 img7 img7" "text8 text8 text8" "img8 img8 img8" "text9 text9 text9" "img9 img9 img9" "text10 text10 text10" "img10 img10 img10";
     row-gap: 1rem;
-    background-image: url("../img/bg2-desen.jpg"); }
+    background-image: url("../img/bg2-desen.jpg");
+    /* caracteristicas de los elementos de la pagina Historia*/
+    /* bucle para generar los id del Grid*/ }
     body .mainHistoria .histImg {
       border-radius: 1rem;
       border-style: groove;
@@ -206,7 +223,10 @@ body, body main, body .mainHistoria, body .mainDisc {
     justify-content: center;
     justify-items: center;
     row-gap: 1rem;
-    font-size: 16px; }
+    font-size: 16px;
+    /* caracteristicas de los elementos de la pagina Discografia*/
+    /* animaciones de los links */
+    /* bucle para generar los id del Grid*/ }
     body .mainDisc .discImage {
       margin: 0px;
       width: 100%;
@@ -361,6 +381,7 @@ body, body main, body .mainHistoria, body .mainDisc {
         margin: 0.8px;
         background-color: lightgrey; }
 
+/* Caracteristicas del pie de pagina -footer- */
 footer {
   background-color: #232323;
   background-image: url("../img/amlogo.png");
@@ -377,89 +398,103 @@ footer {
     color: white;
     text-decoration: none; }
 
+/* Llamado al archivo de media queries */
 @media screen and (max-width: 600px) {
   .eventNameDesktop {
     display: none; } }
 
 @media screen and (max-width: 899px) {
-  .menu2 {
+  body header .menu2 {
+    display: none; }
+  body main .content2 {
     display: none; } }
 
 @media screen and (min-width: 600px) {
   /* caracteristicas del titulo */
-  .title {
-    font-size: 4rem;
-    margin-top: 3rem;
-    font-weight: 1500; }
-  h1 {
-    font-size: 4rem;
-    margin-top: 3rem;
-    font-weight: 1500; }
-  /* Caracteristicas del Main */
-  main {
-    font-size: 1.25rem; }
-  .mainHistoria {
-    display: grid;
-    grid-template-areas: "histTitle histTitle histTitle"  "img1 text1 text1" "text2 text2 img2" "img3 text3 text3" "text4 text4 img4" "img5 text5 text5" "text6 text6 img6" "img7 text7 text7" "text8 text8 img8" "img9 text9 text9" "text10 text10 img10";
-    row-gap: 1em; }
-  .histImg {
-    display: flex;
-    flex-direction: column; }
-  .histText {
-    display: flex;
-    flex-direction: column; }
-  .mainDisc {
-    display: grid;
-    grid-template-areas: "dTitle dTitle" "discTitle1 discTitle1" "discImg1 discText1" "discLink1 discLink1" "discTitle2 discTitle2" "discImg2 discText2" "discLink2 discLink2" "discTitle3 discTitle3" "discImg3 discText3" "discLink3 discLink3" "discTitle4 discTitle4" "discImg4 discText4" "discLink4 discLink4" "discTitle5 discTitle5" "discImg5 discText5" "discLink5 discLink5" "discTitle6 discTitle6" "discImg6 discText6" "discLink6 discLink6";
-    justify-content: center;
-    justify-items: Center;
-    grid-template-columns: 1.5fr 2fr;
-    font-size: 1.25rem; }
-  .discText {
-    text-align: start; }
-  .mainEvent {
-    font-size: 1.25rem; }
-  .eventName {
-    display: none; }
-  footer {
-    font-size: 1.25rem; }
-  .fs-c {
-    font-size: 1rem; } }
+  body, body main, body .mainHistoria {
+    font-size: 1.25rem;
+    /* Caracteristicas del Main */ }
+    body header .title {
+      font-size: 4rem;
+      margin-top: 3rem;
+      font-weight: 1500; }
+    body header h1, body .mainHistoria header h1 {
+      font-size: 4rem;
+      margin-top: 3rem;
+      font-weight: 1500; }
+    body .mainHistoria {
+      display: grid;
+      grid-template-areas: "histTitle histTitle histTitle"  "img1 text1 text1" "text2 text2 img2" "img3 text3 text3" "text4 text4 img4" "img5 text5 text5" "text6 text6 img6" "img7 text7 text7" "text8 text8 img8" "img9 text9 text9" "text10 text10 img10";
+      row-gap: 1em; }
+      body .mainHistoria .histImg {
+        display: flex;
+        flex-direction: column; }
+      body .mainHistoria .histText {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.25rem; }
+    body .mainDisc {
+      display: grid;
+      grid-template-areas: "dTitle dTitle" "discTitle1 discTitle1" "discImg1 discText1" "discLink1 discLink1" "discTitle2 discTitle2" "discImg2 discText2" "discLink2 discLink2" "discTitle3 discTitle3" "discImg3 discText3" "discLink3 discLink3" "discTitle4 discTitle4" "discImg4 discText4" "discLink4 discLink4" "discTitle5 discTitle5" "discImg5 discText5" "discLink5 discLink5" "discTitle6 discTitle6" "discImg6 discText6" "discLink6 discLink6";
+      justify-content: center;
+      justify-items: Center;
+      grid-template-columns: 1.5fr 2fr;
+      font-size: 1.25rem; }
+      body .mainDisc .discText {
+        text-align: start; }
+    body .mainEvent {
+      font-size: 1.25rem; }
+    body .eventName {
+      display: none; }
+    body footer, body .mainHistoria footer {
+      font-size: 1.25rem; }
+    body .fs-c {
+      font-size: 1rem; } }
 
 @media screen and (min-width: 900px) {
-  main {
-    font-size: 1.5rem; }
-  .navbar {
+  body header .navbar {
     display: none; }
-  .mainHistoria {
-    border-radius: 2rem;
-    border-style: solid;
-    border-color: gray;
-    padding: 2rem;
-    margin: 1rem;
-    margin-top: 2rem;
-    margin-bottom: 3rem; }
-  .mainDisc {
-    border-radius: 2rem;
-    border-style: solid;
-    border-color: gray;
-    padding: 2rem;
-    margin: 1rem;
-    margin-top: 2rem;
-    margin-bottom: 3rem; }
-  footer {
+  body main, body .mainHistoria main {
     font-size: 1.5rem; }
-  .fs-c {
+    body main .content1 {
+      display: none; }
+  body .mainHistoria {
+    border-radius: 2rem;
+    border-style: solid;
+    border-color: gray;
+    padding: 2rem;
+    margin: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(/img/bg2-desen.jpg); }
+  body .mainDisc {
+    border-radius: 2rem;
+    border-style: solid;
+    border-color: gray;
+    padding: 2rem;
+    margin: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(/img/bg2-desen.jpg); }
+  body footer, body .mainHistoria footer {
+    font-size: 1.5rem; }
+  body .fs-c {
     font-size: 1.25rem; } }
 
 @media screen and (min-width: 1100px) {
-  .mainHistoria {
+  body .mainHistoria {
     width: 1068px;
     margin: auto;
     margin-top: 2rem;
     margin-bottom: 3rem;
     justify-self: center; }
-  .mainDisc {
+  body .mainDisc {
     width: 1068px;
     margin: auto;
     margin-top: 2rem;
