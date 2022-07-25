@@ -102,13 +102,31 @@
             display: none;
         }
         footer{
-            font-size: $tamano-letra * 1.25;
-        }
-        .fs-c{
-            font-size: $tamano-letra;
+            display: grid;
+            grid-template-areas: "redesTitulo link1 nameFooter"
+            "redes1 link2 nameFooter"
+            "redes2 link3 nameFooter"
+            "redes3 link4 nameFooter"
+            "redes4 link5 nameFooter"
+            "redes5 link6 nameFooter";
+            grid-template-columns: 1fr 2fr 1fr;
+            justify-content: center;
+            justify-items: center;
+            h3{
+                font-size: $tamano-letra *1.25;
+            }
+            h4{
+                font-size: $tamano-letra;
+            }
+            .fLinks{
+                font-size: $tamano-letra;
+            }
         }
     }
     }
+        
+    
+    
     
 @media screen and (min-width:900px){
     body{

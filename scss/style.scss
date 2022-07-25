@@ -38,7 +38,7 @@ body{
             margin-bottom: 12rem;
             padding-top: 5rem;
             font-weight: 1000;
-            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-width: 1.5px;
             -webkit-text-stroke-color: ghostwhite;
             animation-duration: 1.5s;
             animation-name: reveal_title;
@@ -337,19 +337,43 @@ body{
 }
 /* Caracteristicas del pie de pagina -footer- */ 
 footer{
+    display: grid;
+    grid-template-areas: "redesTitulo"
+    "redes1"
+    "redes2"
+    "redes3"
+    "redes4"
+    "redes5"
+    "link1"
+    "link2"
+    "link3"
+    "link4"
+    "link5"
+    "link6"
+    "nameFooter";
+    justify-content: center;
+    justify-items: center;
+    @each $item, $grid in $grid-footer {
+        ##{$grid} {
+            grid-area: $grid;
+        }
+    }
     background-color: $color-footer;
-    background-image: url('../img/amlogo.png');
-    @include backgrounds;
+    color: $color-footer-letra;
     padding: 0.5rem;
-    h4{
+    h3{
         font-size: $tamano-letra;
-     }
-    .footerLink{
+    }
+    h4{
         font-size: $tamano-letra * 0.8;
-        padding: 0.4rem;
-        padding-top: 0.6rem;
-        color: $color-p-letra;
+     }
+    .fLinks{
+        font-size: $tamano-letra * 0.8;
+        color: $color-footer-letra;
         text-decoration: none;
+    }
+    .logos{
+        width: 1.5rem;
     }
 }
 /* Llamado al archivo de media queries */ 

@@ -10,7 +10,8 @@ $transiciones: 0.4s;
 
 $bg-nav: darkblue;
 
-$color-footer: rgb(35,35,35);
+$color-footer: rgb(45, 45, 45);
+$color-footer-letra: rgb(177, 177, 177);
 
 $tamano-imagen: 100%;
 
@@ -111,6 +112,20 @@ $grid-disc-img-text: (
     text6: discText6
 );
 
+$grid-footer: (
+    red1: redes1,
+    red2: redes2,
+    red3: redes3,
+    red4: redes4,
+    red5: redes5,
+    link1: link1,
+    link2: link2,
+    link3: link3,
+    link4: link4,
+    link5: link5,
+    link6: link6,
+    name: nameFooter
+);
 
 
 

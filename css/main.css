@@ -40,7 +40,7 @@ body, body main, body .mainHistoria {
       margin-bottom: 12rem;
       padding-top: 5rem;
       font-weight: 1000;
-      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-width: 1.5px;
       -webkit-text-stroke-color: ghostwhite;
       animation-duration: 1.5s;
       animation-name: reveal_title;
@@ -383,20 +383,47 @@ body, body main, body .mainHistoria {
 
 /* Caracteristicas del pie de pagina -footer- */
 footer {
-  background-color: #232323;
-  background-image: url("../img/amlogo.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  display: grid;
+  grid-template-areas: "redesTitulo" "redes1" "redes2" "redes3" "redes4" "redes5" "link1" "link2" "link3" "link4" "link5" "link6" "nameFooter";
+  justify-content: center;
+  justify-items: center;
+  background-color: #2d2d2d;
+  color: #b1b1b1;
   padding: 0.5rem; }
-  footer h4 {
+  footer #redes1 {
+    grid-area: redes1; }
+  footer #redes2 {
+    grid-area: redes2; }
+  footer #redes3 {
+    grid-area: redes3; }
+  footer #redes4 {
+    grid-area: redes4; }
+  footer #redes5 {
+    grid-area: redes5; }
+  footer #link1 {
+    grid-area: link1; }
+  footer #link2 {
+    grid-area: link2; }
+  footer #link3 {
+    grid-area: link3; }
+  footer #link4 {
+    grid-area: link4; }
+  footer #link5 {
+    grid-area: link5; }
+  footer #link6 {
+    grid-area: link6; }
+  footer #nameFooter {
+    grid-area: nameFooter; }
+  footer h3 {
     font-size: 1rem; }
-  footer .footerLink {
+  footer h4 {
+    font-size: 0.8rem; }
+  footer .fLinks {
     font-size: 0.8rem;
-    padding: 0.4rem;
-    padding-top: 0.6rem;
-    color: white;
+    color: #b1b1b1;
     text-decoration: none; }
+  footer .logos {
+    width: 1.5rem; }
 
 /* Llamado al archivo de media queries */
 @media screen and (max-width: 600px) {
@@ -447,9 +474,17 @@ footer {
     body .eventName {
       display: none; }
     body footer, body .mainHistoria footer {
-      font-size: 1.25rem; }
-    body .fs-c {
-      font-size: 1rem; } }
+      display: grid;
+      grid-template-areas: "redesTitulo link1 nameFooter" "redes1 link2 nameFooter" "redes2 link3 nameFooter" "redes3 link4 nameFooter" "redes4 link5 nameFooter" "redes5 link6 nameFooter";
+      grid-template-columns: 1fr 2fr 1fr;
+      justify-content: center;
+      justify-items: center; }
+      body footer h3, body .mainHistoria footer h3 {
+        font-size: 1.25rem; }
+      body footer h4, body .mainHistoria footer h4 {
+        font-size: 1rem; }
+      body footer .fLinks {
+        font-size: 1rem; } }
 
 @media screen and (min-width: 900px) {
   body header .navbar {
